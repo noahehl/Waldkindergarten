@@ -1,1 +1,25 @@
-Hallo Internet ich teste etwas
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ortsfrage</title>
+    <script>
+        function checkAnswer() {
+            var answer = document.getElementById("answer").value.toLowerCase();
+            if (answer === "arpke") {
+                window.location.href = "https://www.google.com/maps/dir/Elbinger+Str.+13,+31275+Lehrte/Nasser+Kamp,+31275+Lehrte";
+            } else {
+                alert("Falsche Antwort! Bitte versuche es erneut.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>In welchen Ort befinden wir uns?</h1>
+    <p>Bitte gib den Namen des Ortes ein:</p>
+    <input type="text" id="answer" placeholder="Ort eingeben...">
+    <button onclick="checkAnswer()">Antwort überprüfen</button>
+</body>
+</html>
+
