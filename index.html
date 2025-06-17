@@ -9,17 +9,14 @@
             var answer = document.getElementById("answer").value.toLowerCase();
             var group = document.getElementById("group").value;
 
-            if (answer === "arpke") {
+             if (answer === "arpke") {
+                if (group === "Immensen" || group === "Hämelerwald") {
+                    alert("Guckt nochmal in eurem Zelt, der Schatz liegt doch schon da!");
+                    return;
+                     }
                 var routes = {
                     "Arpke": "https://www.google.com/maps/dir/52.385974,10.078309/52.391746,10.086804", <!--Bahnhof-->
-                    "Aligse": "https://www.google.com/maps/dir/52.385974,10.078309/52.384315,10.095378", <!--Telefonhaus_Hasendamm12-->
-                    "Steinwedel": "https://www.google.com/maps/dir/52.385974,10.078309/52.383050,10.096469", <!--Aselmann11-->
-                    "Ahlten": "https://www.google.com/maps/dir/52.385974,10.078309/52.387927,10.093568", <!--Spielplatz_Waldpark13-->
-                    "Lehrte": "https://www.google.com/maps/dir/52.385974,10.078309/52.388857,10.080360", <!--Trafo_Knüppels2-->
-                    "Immensen": "https://www.google.com/maps/dir/52.385974,10.078309/52.391746,10.086804", <!--Bahnhof3-->
-                    "Sievershausen": "https://www.google.com/maps/dir/52.385974,10.078309/52.388918,10.097363", <!--Spielplatz_Schilfkamp6-->
-                    "Hämelerwald": "https://www.google.com/maps/dir/52.385974,10.078309/52.385373,10.099786", <!--Kirche9-->
-                    "Kolshorn": "https://www.google.com/maps/dir/52.385974,10.078309/Am+Waldbad+5,+31275+Lehrte"
+                    "Lehrte": "https://www.google.com/maps/dir/52.385974,10.078309/52.384315,10.095378", <!--Hasendamm-->
                 };
 
                 if (routes[group]) {
@@ -39,14 +36,9 @@
     <select id="group">
         <option value="">-- Gruppe auswählen --</option>
         <option value="Arpke">Arpke</option>
-        <option value="Aligse">Aligse</option>
-        <option value="Steinwedel">Steinwedel</option>
-        <option value="Ahlten">Ahlten</option>
         <option value="Lehrte">Lehrte</option>
         <option value="Immensen">Immensen</option>
-        <option value="Sievershausen">Sievershausen</option>
         <option value="Hämelerwald">Hämelerwald</option>
-        <option value="Kolshorn">Kolshorn</option>
     </select>
 
     <p>In welchen Ort befinden wir uns?</p>
